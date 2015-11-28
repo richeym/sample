@@ -1,12 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@using System.Configuration
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div> 
+    <div>
         @RenderBody()
     </div>
+    <footer>
+        <div style="padding: 5px; background-color: #f0e68c">@ConfigurationManager.AppSettings["SiteEnvironment"]</div>
+    </footer>
 </body>
 </html>
